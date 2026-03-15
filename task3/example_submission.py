@@ -15,7 +15,7 @@ ENDPOINT = "task3"
 API_TOKEN = os.getenv("TEAM_TOKEN")
 SERVER_URL = os.getenv("SERVER_URL")
 
-CSV_FILE="data/out/load_example_submission.csv"
+CSV_FILE="submission.csv"
 
 
 def generate_mock_submission():
@@ -38,8 +38,6 @@ def generate_mock_submission():
         writer.writerows(predictions)
 
 def main():
-    generate_mock_submission()
-
     if not API_TOKEN:
         raise ValueError(
             "TEAM_TOKEN not provided. Define TEAM_TOKEN in .env"
